@@ -11,7 +11,7 @@ get_latency() {
 
 get_latency_avg() {
 # receive integers, count them, sum them, and divdie by count
-	local this_req_count=$(echo $@|tr " " "\n"|wc -l)
+	local this_req_count=$(echo $@|wc -w)
 	# doing nothing scales well
 	if [ "$this_req_count" -lt "2" ]; then
 		exit
