@@ -4,8 +4,8 @@
 get_latency() {
 # receive IP address as request and return latency in ms from system host call
 	local this_dns_server=$1
-	local this_result=$(host -W 1 -v google.com $this_dns_server|grep Received|awk {'print $7'})
-	echo $this_result
+	local this_res=$(host -W 1 -v google.com $this_dns_server|grep Received|awk {'print $7'})
+	echo $this_res
 }
 
 
