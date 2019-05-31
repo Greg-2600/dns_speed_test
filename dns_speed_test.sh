@@ -29,9 +29,9 @@ main() {
 	# iterate through dns server list
 	for this_dns_server in $dns_servers; do
 		# get latency
-		this_result=$(get_latency $this_dns_server)
+		this_res=$(get_latency $this_dns_server)
 		# average latency
-		this_latency_avg=$(get_latency_avg $this_result)
+		this_latency_avg=$(get_latency_avg $this_res)
 		# doing nothing scales well
 		if [ "$this_latency_avg" ]; then
 			echo $this_latency_avg $this_dns_server
