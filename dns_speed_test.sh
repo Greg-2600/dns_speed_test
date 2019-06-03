@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # test latency from common public DNS servers, and include any IP Addresses from STDIN
 
 get_latency() {
